@@ -52,9 +52,9 @@ Player.prototype.update = function() {
 
         Player.prototype.collision = function() {
 
-            for (var i = 0; i < 3; i++) {
+            for (var i = 0; i < allEnemies.length; i++) {
         
-            if (this.x >= allEnemies[i].x && this.y >= allEnemies[i].y ) {
+            if (this.x + 50 > allEnemies[i].x && this.x < allEnemies[i].x + 50 && this.y < allEnemies[i].y + 50 && this.y + 50 > allEnemies[i].y ) {
                 
                 this.reset();
             	}
