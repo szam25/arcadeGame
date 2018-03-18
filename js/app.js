@@ -44,7 +44,7 @@ var Player = function() {
 
 Player.prototype.update = function() {
     if (this.y < -10 || this.x < 0) {
-     
+     alert("Win"); 
       this.reset(); 
 }
     this.checkCollisions();
@@ -58,7 +58,7 @@ Player.prototype.render = function() {
         for (var i = 0, len = allEnemies.length; i < len ; i++) {
 
         if (this.x + 50 >= allEnemies[i].x && this.x < allEnemies[i].x + 50 && this.y < allEnemies[i].y + 50  && this.y + 50>= allEnemies[i].y ) {
-            
+            alert("Loose"); 
             this.reset();
         }
     }
