@@ -43,10 +43,12 @@ var Player = function() {
 };
 
 Player.prototype.update = function() {
-    if (this.y < -10) {
-     alert("Win"); 
+    if (this.y < -10 || this.x < 0) {
       this.reset(); 
-}
+    }
+    if (this.y < -10){
+    alert("Win"); 
+    }
     this.checkCollisions();
 };
 Player.prototype.render = function() {
