@@ -43,7 +43,7 @@ var Player = function() {
 };
 
 Player.prototype.update = function() {
-    if (this.y < -10 || this.x < 0) {
+    if (this.y < -10) {
      alert("Win"); 
       this.reset(); 
 }
